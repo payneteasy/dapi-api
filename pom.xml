@@ -7,11 +7,38 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <name>API API ${project.version}</name>
+
+    <description>Classes for DAPI acknowlegement/cardref notification requests</description>
+
+    <url>https://github.com/payneteasy/dapi-api</url>
+
     <scm>
         <connection>scm:git:git@github.com:payneteasy/dapi-api.git</connection>
         <developerConnection>scm:git:git@github.com:payneteasy/dapi-api.git</developerConnection>
         <url>https://github.com/payneteasy/dapi-api</url>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>file-release</id>
+            <name>Release to local file system</name>
+            <url>file:///tmp/dapi-api-release-${project.version}</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>file-snapshot</id>
+            <name>Make a snapshot to local file system</name>
+            <uniqueVersion>false</uniqueVersion>
+            <url>file:///tmp/dapi-api-snapshot-${project.version}</url>
+        </snapshotRepository>
+
+        <site>
+            <id>local-site</id>
+            <name>Store only on local disk</name>
+            <url>file:///tmp/dapi-api</url>
+        </site>
+    </distributionManagement>
 
     <developers>
         <developer>
@@ -28,14 +55,12 @@
 
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>2.0.1.Final</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
@@ -58,6 +83,22 @@
                     <showWarnings>true</showWarnings>
                     <optimize>false</optimize>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
             </plugin>
         </plugins>
     </build>
