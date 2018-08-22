@@ -6,7 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VerOutConsumer extends OutConsumer {
+
+    /**
+     * Consumer's birthday
+     */
     private String birthDay;
+
+    /**
+     * List of IP addresses
+     */
     private List<String> ipAddresses = new ArrayList<String>();
 
     @Size(min = 8, max = 8)

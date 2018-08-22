@@ -6,6 +6,10 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlElement;
 
 public abstract class AbstractCard {
+
+    /**
+     * Card number
+     */
     private String number;
 
     @NotNull

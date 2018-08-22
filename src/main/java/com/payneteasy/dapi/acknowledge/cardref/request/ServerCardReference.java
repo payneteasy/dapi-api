@@ -1,7 +1,15 @@
 package com.payneteasy.dapi.acknowledge.cardref.request;
 
 public class ServerCardReference {
+
+    /**
+     * This ID uses in PaynetEasy for mapping card data source to ID in Merchant's system
+     */
     private String serverCardId;
+
+    /**
+     * Unique card ID that uses for info only
+     */
     private long uniqueReferenceCardId;
 
     public ServerCardReference() {

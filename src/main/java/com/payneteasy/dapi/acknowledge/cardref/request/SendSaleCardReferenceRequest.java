@@ -6,6 +6,12 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
+/**
+ * Class is uses in card mapping notification requests for allow Consumer credentials
+ * (phone, email, billing address, twitter name, etc) for mapping to card data.
+ * PayneEasy sends HTTP request to Merchant's acknowledge server with this structure
+ * as response on sale transaction complete.
+ */
 public class SendSaleCardReferenceRequest {
     private InConsumer consumer;
     private CardReferenceSession session;

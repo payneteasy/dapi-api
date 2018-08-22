@@ -1,7 +1,9 @@
 package com.payneteasy.dapi.acknowledge.general;
 
 public class InSourceCard {
+
     private InCardReference reference;
+
     public InSourceCard(InCardReference inCardReference){
         this.reference = inCardReference;
     }

@@ -1,6 +1,10 @@
 package com.payneteasy.dapi.acknowledge.general;
 
 public class InDevice {
+
+    /**
+     * Serial number of Customer's mobile device
+     */
     private String serialNumber;
 
     public InDevice(String serialNumber) {

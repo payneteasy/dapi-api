@@ -1,6 +1,10 @@
 package com.payneteasy.dapi.acknowledge.cardref.request;
 
 public class CardNonSensitiveDataAndReference {
+
+    /**
+     * Bank Identification Number
+     */
     private Integer bin;
     private ServerCardReference reference;
 

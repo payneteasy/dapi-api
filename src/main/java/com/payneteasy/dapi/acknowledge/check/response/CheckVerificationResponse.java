@@ -5,6 +5,11 @@ import com.payneteasy.dapi.acknowledge.general.VerOutConsumer;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
+/**
+ * Class is uses for security purposes and allows PaynetEasy to compare the data sent by Merchant’s app
+ * with the data stored on Merchant’s server through check-verification operations. Merchant's acknowledge server
+ * should respond to PaynetEasy with current structure.
+ */
 public class CheckVerificationResponse extends AbstractCheckResponse {
     private Billing billing;
     private VerOutConsumer consumer;
@@ -37,6 +42,9 @@ public class CheckVerificationResponse extends AbstractCheckResponse {
         return consumer != null;
     }
 
+    /**
+     * Billing info about consumer
+     */
     public static class Billing{
         private DapiAddress address;
         private String phone;

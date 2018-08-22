@@ -5,6 +5,11 @@ import com.payneteasy.dapi.acknowledge.general.OutSourceCard;
 
 import javax.validation.Valid;
 
+/**
+ * Class is uses for security purposes and allows PaynetEasy to compare the data sent by Merchant’s app
+ * with the data stored on Merchant’s server through check-sale operations. Merchant's acknowledge server
+ * should respond to PaynetEasy with current structure.
+ */
 public class CheckSaleResponse extends AbstractCheckResponse implements IHasSourceOfFunds {
     private OutConsumer consumer;
     private OutSourceCard sourceOfFunds;

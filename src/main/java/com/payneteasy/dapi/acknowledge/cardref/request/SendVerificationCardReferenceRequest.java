@@ -2,6 +2,12 @@ package com.payneteasy.dapi.acknowledge.cardref.request;
 
 import com.payneteasy.dapi.acknowledge.general.InConsumer;
 
+/**
+ * Class is uses in card mapping notification requests for allow Consumer credentials
+ * (phone, email, billing address, twitter name, etc) for mapping to card data.
+ * PayneEasy sends HTTP request to Merchant's acknowledge server with this structure
+ * as response on verification transaction complete.
+ */
 public class SendVerificationCardReferenceRequest {
     private InConsumer consumer;
     private ServerCardReference reference;
